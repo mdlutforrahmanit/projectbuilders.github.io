@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium construction services with precision engineering and innovative building solutions.">
+    <title>Vertex Builders | Constructing the Future</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#e5e5e5',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom styles */
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .timeline-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -2rem;
+            width: 4rem;
+            height: 2px;
+            background: #f59e0b;
+        }
+        .testimonial-carousel {
+            scroll-behavior: smooth;
+        }
+        .before-after-slider {
+            background: linear-gradient(90deg, #000 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-primary text-secondary font-sans antialiased">
+    <!-- Sticky Navigation -->
+    <header class="fixed w-full bg-black bg-opacity-90 z-50 shadow-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-accent">VERTEX<span class="text-white">BUILDERS</span></a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-accent transition">Home</a>
+                    <a href="#about" class="text-white hover:text-accent transition">About</a>
+                    <a href="#services" class="text-white hover:text-accent transition">Services</a>
+                    <a href="#projects" class="text-white hover:text-accent transition">Projects</a>
+                    <a href="#contact" class="text-white hover:text-accent transition">Contact</a>
+                </nav>
+                
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-accent text-black px-6 py-2 rounded-md font-medium hover:bg-yellow-500 transition">Get Quote</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-white hover:text-accent transition">Home</a>
+                <a href="#about" class="text-white hover:text-accent transition">About</a>
+                <a href="#services" class="text-white hover:text-accent transition">Services</a>
+                <a href="#projects" class="text-white hover:text-accent transition">Projects</a>
+                <a href="#contact" class="text-white hover:text-accent transition">Contact</a>
+                <a href="#contact" class="bg-accent text-black px-6 py-2 rounded-md font-medium hover:bg-yellow-500 transition text-center">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 hero-overlay">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Modern construction site" 
+                 class="w-full h-full object-cover" 
+                 loading="lazy">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">We Build the Future <span class="text-accent">with Precision</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">Delivering exceptional construction services with innovative solutions and uncompromising quality standards.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-accent text-black px-8 py-3 rounded-md font-bold hover:bg-yellow-500 transition text-lg">Get a Quote</a>
+                <a href="#projects" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-bold hover:bg-white hover:text-black transition text-lg">View Projects</a>
+            </div>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-accent">Vertex Builders</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Construction team" 
+                         class="rounded-lg shadow-xl hover-scale" 
+                         loading="lazy">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Building Excellence Since 2005</h3>
+                    <p class="text-gray-300 mb-6">Founded with a vision to transform the construction landscape, Vertex Builders has grown into a trusted name in commercial and residential construction, known for our commitment to quality, safety, and innovation.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-bullseye text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Our Mission</h4>
+                                <p class="text-gray-300">To deliver exceptional construction services through innovative solutions, skilled craftsmanship, and uncompromising quality standards.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-eye text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Our Vision</h4>
+                                <p class="text-gray-300">To be the most respected construction company, recognized for setting benchmarks in quality, safety, and sustainable building practices.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Certifications</h4>
+                                <p class="text-gray-300">ISO 9001 Certified • OSHA Safety Certified • LEED Accredited Professionals • State Licensed Contractors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-accent">Core Services</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Comprehensive construction solutions tailored to meet your specific project requirements and exceed expectations.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Commercial Construction</h3>
+                    <p class="text-gray-300">From office towers to retail spaces, we deliver commercial projects on time and within budget.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Residential Construction</h3>
+                    <p class="text-gray-300">Custom homes and residential complexes built with precision and attention to detail.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Renovation & Remodeling</h3>
+                    <p class="text-gray-300">Transform your existing space with our expert renovation and remodeling services.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Infrastructure Development</h3>
+                    <p class="text-gray-300">Roads, bridges, and public works projects executed with engineering excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section id="projects" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-accent">Recent Projects</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Explore our portfolio of successfully completed projects across various sectors.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button" class="project-filter px-6 py-2 text-sm font-medium rounded-l-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 focus:z-10" data-filter="all">
+                        All Projects
+                    </button>
+                    <button type="button" class="project-filter px-6 py-2 text-sm font-medium border-t border-b border-gray-600 bg-gray-800 text-white hover:bg-gray-700 focus:z-10" data-filter="commercial">
+                        Commercial
+                    </button>
+                    <button type="button" class="project-filter px-6 py-2 text-sm font-medium rounded-r-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 focus:z-10" data-filter="residential">
+                        Residential
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-item commercial" data-category="commercial">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Commercial high-rise" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Downtown Financial Center</h3>
+                                <p class="text-gray-300">45-story commercial tower with LEED Platinum certification</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-item residential" data-category="residential">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Luxury residential complex" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Harborview Residences</h3>
+                                <p class="text-gray-300">Luxury waterfront condominium development</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-item commercial" data-category="commercial">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Office complex" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Tech Park Campus</h3>
+                                <p class="text-gray-300">Innovative office spaces for tech companies</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-item residential" data-category="residential">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Suburban homes" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Greenfield Subdivision</h3>
+                                <p class="text-gray-300">Sustainable single-family home community</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-item commercial" data-category="commercial">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Retail complex" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Metro Shopping Plaza</h3>
+                                <p class="text-gray-300">Mixed-use retail and dining destination</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-item residential" data-category="residential">
+                    <div class="relative overflow-hidden rounded-lg hover-scale">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Custom home" 
+                             class="w-full h-64 object-cover transition duration-500 hover:scale-110" 
+                             loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-0 hover:opacity-100 transition">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Cliffside Estate</h3>
+                                <p class="text-gray-300">Bespoke luxury residence with panoramic views</p>
+                                <a href="#" class="text-accent font-medium mt-2 inline-block">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-accent text-black px-8 py-3 rounded-md font-bold hover:bg-yellow-500 transition">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why <span class="text-accent">Choose Us</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">What sets Vertex Builders apart from other construction companies</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Uncompromising Quality</h3>
+                    <p class="text-gray-300">We adhere to the highest construction standards with rigorous quality control at every project phase.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Safety First Approach</h3>
+                    <p class="text-gray-300">Our safety record is industry-leading with comprehensive protocols protecting workers and clients.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">On-Time Delivery</h3>
+                    <p class="text-gray-300">90% of our projects are completed on or ahead of schedule through meticulous planning.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Transparent Pricing</h3>
+                    <p class="text-gray-300">No hidden costs with detailed estimates and regular budget updates throughout your project.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sustainable Practices</h3>
+                    <p class="text-gray-300">Eco-friendly construction methods and materials reduce environmental impact without compromising quality.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition hover-scale">
+                    <div class="text-accent text-4xl mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dedicated Support</h3>
+                    <p class="text-gray-300">Your personal project manager is available 24/7 to address questions and provide updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Story / Case Study -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-accent">Success Story</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Hear from our satisfied clients about their experience working with Vertex Builders.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative h-96 w-full rounded-lg overflow-hidden">
+                        <div class="before-after-slider w-full h-full">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Before construction" 
+                                 class="absolute inset-0 w-full h-full object-cover" 
+                                 loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="After construction" 
+                                 class="absolute inset-0 w-full h-full object-cover mix-blend-normal" 
+                                 loading="lazy">
+                            <input type="range" min="0" max="100" value="50" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-ew-resize z-10" id="before-after-slider">
+                            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-white z-5" style="transform: translateX(-50%);"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                                 alt="Client photo" 
+                                 class="w-16 h-16 rounded-full object-cover mr-4" 
+                                 loading="lazy">
+                            <div>
+                                <h4 class="font-bold text-lg">Michael Johnson</h4>
+                                <p class="text-gray-300">CEO, TechSolutions Inc.</p>
+                            </div>
+                        </div>
+                        
+                        <blockquote class="text-gray-300 mb-6 italic">
+                            "Vertex Builders transformed our outdated office space into a modern, collaborative work environment that has boosted employee morale and productivity. Their attention to detail and commitment to staying on schedule was impressive."
+                        </blockquote>
+                        
+                        <div class="flex items-center text-yellow-400 mb-6">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ml-2 text-white">5.0 Rating</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-400 text-sm">Project Type</p>
+                                <p class="font-medium">Commercial Renovation</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Project Duration</p>
+                                <p class="font-medium">6 Months</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Square Footage</p>
+                                <p class="font-medium">25,000 sq.ft</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Completed</p>
+                                <p class="font-medium">March 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-accent">Process</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">A streamlined approach to ensure your project's success from concept to completion.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative timeline-step">
+                        <div class="bg-gray-800 p-6 rounded-lg h-full hover:bg-gray-700 transition hover-scale">
+                            <div class="text-accent text-3xl mb-4">
+                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <span class="text-accent">1</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Initial Consultation</h3>
+                            <p class="text-gray-300">We discuss your vision, requirements, budget, and timeline to understand your project goals.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative timeline-step">
+                        <div class="bg-gray-800 p-6 rounded-lg h-full hover:bg-gray-700 transition hover-scale">
+                            <div class="text-accent text-3xl mb-4">
+                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <span class="text-accent">2</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Design & Planning</h3>
+                            <p class="text-gray-300">Our architects and engineers create detailed plans and 3D renderings for your approval.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative timeline-step">
+                        <div class="bg-gray-800 p-6 rounded-lg h-full hover:bg-gray-700 transition hover-scale">
+                            <div class="text-accent text-3xl mb-4">
+                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <span class="text-accent">3</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Construction Phase</h3>
+                            <p class="text-gray-300">Skilled craftsmen execute the project with regular progress updates and quality checks.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative">
+                        <div class="bg-gray-800 p-6 rounded-lg h-full hover:bg-gray-700 transition hover-scale">
+                            <div class="text-accent text-3xl mb-4">
+                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <span class="text-accent">4</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Final Handover</h3>
+                            <p class="text-gray-300">We conduct final inspections and deliver your completed project with all documentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Stats -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Stat 1 -->
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-3 counter" data-target="250">0</div>
+                    <div class="text-gray-300 uppercase text-sm tracking-wider">Projects Completed</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-3 counter" data-target="500">0</div>
+                    <div class="text-gray-300 uppercase text-sm tracking-wider">Skilled Workers</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-3">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                    <div class="text-gray-300 uppercase text-sm tracking-wider">Client Satisfaction</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-3">
+                        <span class="counter" data-target="25">0</span>+
+                    </div>
+                    <div class="text-gray-300 uppercase text-sm tracking-wider">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 relative">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Construction background" 
+                 class="w-full h-full object-cover opacity-20" 
+                 loading="lazy">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Construction Project?</h2>
+                <p class="text-gray-300 mb-10">Get in touch with our team today for a free consultation and quote. Let's build something remarkable together.</p>
+                <a href="#contact" class="inline-block bg-accent text-black px-8 py-4 rounded-md font-bold hover:bg-yellow-500 transition text-lg">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-accent">Touch</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Have questions or ready to start your project? Contact us today.</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white" placeholder="(123) 456-7890">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white" placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-500 transition">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-accent mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Our Office</h4>
+                                    <p class="text-gray-300">123 Construction Avenue<br>Building 5, Suite 200<br>New York, NY 10001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Phone</h4>
+                                    <p class="text-gray-300">Main: (212) 555-1000<br>Sales: (212) 555-1001</p>
+                                    <p class="text-gray-300 mt-2">24/7 Emergency: (212) 555-1999</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Email</h4>
+                                    <p class="text-gray-300">info@vertexbuilders.com<br>sales@vertexbuilders.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-accent mr-4 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Hours</h4>
+                                    <p class="text-gray-300">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-accent hover:text-black transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-accent hover:text-black transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-accent hover:text-black transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-accent hover:text-black transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="bg-gray-800 rounded-lg p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-2">Stay Updated</h3>
+                        <p class="text-gray-300">Subscribe to our newsletter for construction insights, tips, and company updates.</p>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <form class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-accent text-white">
+                            <button type="submit" class="bg-accent text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-500 transition whitespace-nowrap">Subscribe Now</button>
+                        </form>
+                        <p class="text-gray-400 text-sm mt-2">By subscribing, you agree to our Privacy Policy. Get a free PDF: "10 Construction Planning Tips".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-accent mb-4 inline-block">VERTEX<span class="text-white">BUILDERS</span></a>
+                    <p class="text-gray-400 mb-6">Constructing innovative, sustainable buildings with precision and excellence since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-accent transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-accent transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent transition">Services</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-accent transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Commercial Construction</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Residential Construction</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Renovation & Remodeling</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Infrastructure Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent mr-3 mt-1"></i>
+                            <span>123 Construction Ave, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-accent mr-3"></i>
+                            <span>(212) 555-1000</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-3"></i>
+                            <span>info@vertexbuilders.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Vertex Builders. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-accent transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-accent transition text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-accent transition text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-500 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Project Filter
+        const filterButtons = document.querySelectorAll('.project-filter');
+        const projectItems = document.querySelectorAll('.project-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('bg-accent', 'text-black'));
+                button.classList.add('bg-accent', 'text-black');
+                
+                // Filter projects
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Before-After Slider
+        const beforeAfterSlider = document.querySelector('.before-after-slider');
+        const sliderInput = document.getElementById('before-after-slider');
+        
+        if (sliderInput) {
+            sliderInput.addEventListener('input', (e) => {
+                const value = e.target.value;
+                beforeAfterSlider.style.backgroundPosition = `${value}% bottom`;
+            });
+        }
+        
+        // Animated Counters
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start counters when section is in view
+        const statsSection = document.querySelector('section.bg-black'); // Adjust selector to your stats section
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Sticky Navigation Highlight
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-accent');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-accent');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
